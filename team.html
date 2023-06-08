@@ -133,7 +133,19 @@
                                 <input type="email" class="form-control" id="teamleademail" name="teamleademail" placeholder="Email" required>
                             </div>
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="teamleadno" name="teamleadno" placeholder="Contact Number" required>
+                                <input type="tel" pattern="[0-9]{11}" oninvalid="setCustomValidity('Please enter in format 03xxxxxxxxx')"" oninput="setCustomValidity('')" class="form-control" id="teamleadno" name="teamleadno" placeholder="Contact Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="position" class="col-12 col-md-2 col-form-label">Position*</label>
+                            <div class="col-12 col-md-2">
+                                
+                                <select name="positions" id="position">
+                                    <option value="member">Member</option>
+                                    <option value="volunteer">Volunteer</option>  
+                                  </select>
+
+                                
                             </div>
                         </div>
                         <div class="form-group row">
@@ -275,7 +287,7 @@
                                                         class="fa fa-facebook"></i></a>
                                                 <a class="sp-insta" href="#" target="_blank"><i
                                                         class="fa fa-instagram"></i></a>
-                                                <a class="sp-in" href="#" target="_blank"><i
+                                                <a class="sp-in" href="https://www.linkedin.com/in/abdbasit108/" target="_blank"><i
                                                         class="fa fa-linkedin"></i></a>
                                             </div>
                                             <div class="speaker-info">
@@ -504,7 +516,10 @@
                             
 
                         </div>
-                        <a role="button" id="memberbtn" class="btn btn-block nav-link btn-primary">Join Us</a>
+                        <!-- <a role="button" id="memberbtn" class="btn btn-block nav-link btn-primary">Join Us</a> -->
+                        <div class="centre-button">
+                        <button type="button" id="memberbtn" class="lgx-btn lgx-btn-big">Join The Team</button>
+                    </div>
                         <!--//.ROW-->
 
                     </div><!-- //.CONTAINER -->
@@ -544,7 +559,7 @@
                             <div class="lgx-footer-single">
                                 <h3 class="footer-title">Social Connection</h3>
                                 <p class="text">
-                                    You should connect social area <br> for Any update
+                                    Connect with our social media handles
                                 </p>
                                 <ul class="list-inline lgx-social-footer">
                                     <li><a href="https://www.facebook.com/profile.php?id=100087510656043&mibextid=ZbWKwL"><i class="fa fa-facebook"
@@ -613,6 +628,7 @@
         Name: document.getElementById('teamname').value,
         Email: document.getElementById('teamleademail').value,
         Contact: document.getElementById('teamleadno').value,
+        Position: document.getElementById('position').value,
         Experience: document.getElementById('feedback').value,
         batch: document.getElementById('batch').value
     
@@ -620,7 +636,8 @@
             
         }).then(()=>
         alert('Your form is submitted! An email has been sent to you with further details.'),
-        sendmail()
+        sendmail(),
+        $('#memberModal').modal('hide')
         ).catch((error)=>alert(error));
     
      

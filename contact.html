@@ -201,7 +201,7 @@
                                      <div class="form-group row">
                                          <label for="firstname" class="col-md-2 col-form-label">First Name</label>
                                          <div class="col-md-10">
-                                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+                                             <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required>
                                          </div>
                                      </div>
                                      <div class="form-group row">
@@ -213,19 +213,19 @@
                                      <div class="form-group row">
                                          <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
                                          <div class="col-md-10">
-                                             <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+                                             <input type="tel" pattern="[0-9]{11}" oninvalid="setCustomValidity('Please enter in format 03xxxxxxxxx')"" oninput="setCustomValidity('')" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
                                          </div>
                                      </div>
                                      <div class="form-group row">
                                          <label for="emailid" class="col-md-2 col-form-label">Email</label>
                                          <div class="col-md-10">
-                                             <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                                             <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" required>
                                          </div>
                                      </div>
                                      <div class="form-group row">
                                          <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
                                          <div class="col-md-10">
-                                             <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                                             <textarea class="form-control" id="feedback" name="feedback" rows="12" required></textarea>
                                          </div>
                                      </div>
                                      <div class="form-group row">

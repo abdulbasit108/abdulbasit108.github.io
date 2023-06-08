@@ -112,7 +112,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Register Now</h4>
+                    <h4 class="modal-title">Registration Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -134,11 +134,11 @@
                             <label for="teamlead" class="col-12 col-md-2 col-form-label">Team Lead*</label>
 
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="teamleademail" name="teamleademail"
+                                <input type="email" class="form-control" id="teamleademail" name="teamleademail"
                                     placeholder="Team Lead Email" required>
                             </div>
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="teamleadno" name="teamleadno"
+                                <input type="tel" pattern="[0-9]{11}" oninvalid="setCustomValidity('Please enter in format 03xxxxxxxxx')"" oninput="setCustomValidity('')" class="form-control" id="teamleadno" name="teamleadno"
                                     placeholder="Team Lead Contact Number" required>
                             </div>
                         </div>
@@ -154,37 +154,37 @@
                         </div>
                         <div id="teamDiv">
                         <div class="form-group row">
-                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Team Member 1</label>
+                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Member 1</label>
                             <div class="col-12 col-md-5">
                                 <input type="text" class="form-control" id="team1name" name="team1name"
                                     placeholder="Member 1 Name">
                             </div>
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="team1email" name="team1email"
+                                <input type="email" class="form-control" id="team1email" name="team1email"
                                     placeholder="Member 1 Email">
                             </div>
 
                         </div>
                         <div class="form-group row">
-                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Team Member 2</label>
+                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Member 2</label>
                             <div class="col-12 col-md-5">
                                 <input type="text" class="form-control" id="team2name" name="team2name"
                                     placeholder="Member 2 Name">
                             </div>
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="team2email" name="team2email"
+                                <input type="email" class="form-control" id="team2email" name="team2email"
                                     placeholder="Member 2 Email">
                             </div>
 
                         </div>
                         <div class="form-group row">
-                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Team Member 3</label>
+                            <label for="teamlead" class="col-12 col-md-2 col-form-label">Member 3</label>
                             <div class="col-12 col-md-5">
                                 <input type="text" class="form-control" id="team3name" name="team3name"
                                     placeholder="Member 3 Name">
                             </div>
                             <div class="col-12 col-md-5">
-                                <input type="text" class="form-control" id="team3email" name="team3email"
+                                <input type="email" class="form-control" id="team3email" name="team3email"
                                     placeholder="Member 3 Email">
                             </div>
 
@@ -298,8 +298,9 @@
                                             </h2>
                                             <h3 class="location"><i class="fa fa-map-marker"></i> NED University,
                                                 Karachi.</h3>
-                                            <a role="button" id="reservebtn"
-                                                class="btn btn-block nav-link btn-primary">Register Now</a>
+                                            <button type="button" id="reservebtn" class="btn btn-primary">Register Now</button>
+                                            <!-- <a role="button" id="reservebtn"
+                                                class="btn btn-block nav-link btn-primary">Register Now</a> -->
 
                                         </div>
                                     </div>
@@ -444,7 +445,7 @@
                                 <figure>
                                     <figcaption>
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="#" target="_blank">Koderz Kombat</a></h3>
+                                            <h3 class="title"><a href="events.html" target="_blank">Koderz Kombat</a></h3>
                                             <h4 class="subtitle">Let the Battle Begin</h4>
                                         </div>
                                     </figcaption>
@@ -457,7 +458,7 @@
                                 <figure>
                                     <figcaption>
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="#" target="_blank">UI/UX Design</a></h3>
+                                            <h3 class="title"><a href="events.html" target="_blank">UI/UX Design</a></h3>
                                             <h4 class="subtitle">for Creative Guys</h4>
                                         </div>
                                     </figcaption>
@@ -470,7 +471,7 @@
                                 <figure>
                                     <figcaption>
                                         <div class="speaker-info">
-                                            <h3 class="title"><a href="#" target="_blank">Datathon</a></h3>
+                                            <h3 class="title"><a href="events.html" target="_blank">Datathon</a></h3>
                                             <h4 class="subtitle">for ML Enthusiasts</h4>
                                         </div>
                                     </figcaption>
@@ -628,8 +629,9 @@
                                                                     (Lead: Dr. M Mubashir Khan)</a></li>
                                                         </p>
                                                         <br>
-                                                        <a role="button" id="reservebtn"
-                                                            class="btn btn-block nav-link btn-warning">Register Now</a>
+                                                        <!-- <a role="button" id="reservebtn"
+                                                            class="btn btn-block nav-link btn-warning">Register Now</a> -->
+                                                            <button type="button" id="reservebtn2" class="btn btn-primary">Register Now</button>
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -1028,7 +1030,8 @@
         
     }).then(()=>
     alert('Your form is submitted! An email has been sent to the Team Lead with further details.'),
-    sendmail()
+    sendmail(),
+    $('#reserveModal').modal('hide')
     ).catch((error)=>alert(error));
 
  

@@ -8,6 +8,10 @@ $("#reservebtn").click(function(){
     $("#reserveModal").modal()
 })
 
+$("#reservebtn2").click(function(){
+    $("#reserveModal").modal()
+})
+
 $('#choice').change(function(){
     if ($(this).val() == "Team") {
         $('#teamDiv').show();
@@ -29,3 +33,14 @@ $('#choice').change(function(){
 })
 
 $("#choice").trigger("change");
+
+$( window ).on( "load", function() {
+    var thisDay = new Date().getDate();
+    if (thisDay >= 15) {
+        $("#reservebtn").attr("disabled", '');
+        
+        
+    } else {
+        $('#reservebtn').removeAttr('disabled');
+    }
+  } );
