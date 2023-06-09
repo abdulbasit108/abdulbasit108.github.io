@@ -624,7 +624,7 @@
     
             document.getElementById('teamForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        set(ref(db, 'team_applications/' + Math.random().toString(36).slice(2, 7)), {
+        set(ref(db, 'team_applications/' + Date.now()), {
         Name: document.getElementById('teamname').value,
         Email: document.getElementById('teamleademail').value,
         Contact: document.getElementById('teamleadno').value,

@@ -345,7 +345,7 @@
     
             document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        set(ref(db, 'feedback/' + Math.random().toString(36).slice(2, 7)), {
+        set(ref(db, 'feedback/' + Date.now()), {
         FirstName: document.getElementById('firstname').value,
         LastName: document.getElementById('lastname').value,
         Email: document.getElementById('emailid').value,

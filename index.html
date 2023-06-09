@@ -1004,7 +1004,7 @@
             appId: "1:560528703484:web:5abe595d48ac9bdf067c79",
             measurementId: "G-TK1JKH7LRF"
         };
-      
+        // Math.random().toString(36).slice(2, 7)
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
@@ -1012,7 +1012,7 @@
 
         document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    set(ref(db, 'webkode_registrations/' + Math.random().toString(36).slice(2, 7)), {
+    set(ref(db, 'webkode_registrations/' + Date.now()), {
     teamName: document.getElementById('teamname').value,
     teamLeadName: document.getElementById('teamleadname').value,
     teamLeadEmail: document.getElementById('teamleademail').value,
