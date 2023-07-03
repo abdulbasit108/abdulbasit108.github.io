@@ -36,11 +36,14 @@ $("#choice").trigger("change");
 
 $( window ).on( "load", function() {
     var thisDay = new Date().getDate();
-    if (thisDay >= 15) {
+    if (thisDay >= 7) {
         $("#reservebtn").attr("disabled", '');
+        $("#reservebtn2").attr("disabled", '');
         
         
     } else {
         $('#reservebtn').removeAttr('disabled');
+        $('#reservebtn2').removeAttr('disabled');
+        
     }
   } );
