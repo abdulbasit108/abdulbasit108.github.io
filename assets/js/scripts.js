@@ -4,6 +4,10 @@ $("#memberbtn").click(function(){
     $("#memberModal").modal()
 })
 
+$("#loginbtn").click(function(){
+    $("#loginModal").modal()
+})
+
 $("#reservebtn").click(function(){
     $("#reserveModal").modal()
 })
